@@ -1,3 +1,5 @@
+This README is made with AI
+
 📦 Python Inventory Management Program
 A simple command-line inventory management application built with Python. This program lets users add, remove, search, and update products in an inventory, as well as view all products and calculate the total stock value. It's a great beginner project for learning about dictionaries, nested data structures, and menu-driven programs in Python.
 
