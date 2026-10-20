@@ -1,5 +1,3 @@
-This README is made with AI
-
 Inventory Manager
 A command-line Python program that lets a user add, remove, search, and update products in a simple inventory, plus calculate total stock value.
 
