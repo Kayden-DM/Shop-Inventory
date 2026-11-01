@@ -1,24 +1,49 @@
-Inventory Manager
-A command-line Python program that lets a user add, remove, search, and update products in a simple inventory, plus calculate total stock value.
+## Inventory
+A command-line inventory manager written in Python. It stores products in a dictionary with a price and quantity for each, and runs an interactive menu loop for adding, removing, editing, searching, and valuing stock.
 
-Concepts Used
-Dictionaries — the inventory dict stores each product's price and quantity as nested key-value pairs.
+## Features
+Add Product — Prompts for a name, price, and quantity, then stores the product in the inventory.
 
-Functions — each menu action is broken into its own reusable function.
+Remove Product — Deletes a product by name if it exists.
 
-Exception Handling — try/except blocks validate numeric input for price and quantity.
+Change Price — Updates the price of an existing product.
 
-Features
-Add & Remove Products — store new items or delete existing ones by name.
+Change Stock — Updates the quantity of an existing product.
 
-Update Price & Stock — change a product's price or quantity with confirmation messages.
+Search Product — Looks up a product and prints its price and quantity.
 
-Search & Totals — look up individual products or calculate the total inventory value.
+View Products — Lists every product with its price and quantity.
 
-Improvements
-Persistent Storage — save the inventory to a file (e.g. JSON) so data isn't lost on exit.
+Calculate Value — Multiplies price by quantity for every product and prints the total inventory value.
 
-Fix Price Input Bug — change_price() uses int() instead of float(), rejecting decimal prices.
+Input Validation — Re-prompts on non-numeric price and quantity input using try/except ValueError.
 
-Duplicate Check & Formatting — warn when adding an existing product and format currency to 2 decimal places.
+Menu Loop — Runs until the user selects option 8 to exit.
+
+## Technologies Used
+text
+| Technology | Purpose |
+|---|---|
+| Python | Application logic |
+| Dictionary (`inventory`) | Stores products and their details |
+| Nested Dictionaries | Holds `price` and `quantity` per product |
+| `input()` / `print()` | Console interaction |
+| `float()` / `int()` | Parses price and quantity values |
+| `try / except` | Handles invalid numeric input |
+<!-- -->
+## How to Use It
+Install Python 3.6 or newer from python.org and make sure it's added to your PATH.
+
+Save the code as inventory.py.
+
+Open a terminal in the folder containing the file.
+
+Run python inventory.py.
+
+Use the menu: 1 to add, 2 to remove, 3 to change price, 4 to change stock, 5 to search, 6 to view all, 7 to calculate total value, 8 to exit.
+
+## Improvements
+Persist the inventory — Save the dictionary to a JSON file on exit and reload it on startup so products survive between sessions.
+
+Fix price precision — change_price uses int() while add_product uses float(), so decimals are lost when editing a price; use float() in both, and format output with two decimal places.
 
