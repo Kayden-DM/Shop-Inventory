@@ -21,7 +21,6 @@ Input Validation — Re-prompts on non-numeric price and quantity input using tr
 Menu Loop — Runs until the user selects option 8 to exit.
 
 ## Technologies Used
-text
 | Technology | Purpose |
 |---|---|
 | Python | Application logic |
